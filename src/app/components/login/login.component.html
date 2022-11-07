@@ -1,0 +1,27 @@
+<section class="login">
+    <h2>Войти</h2>
+    <div class="col-md-7 col-lg-8">
+        <form class="form-control" name="myFormtwo" #myFormtwo="ngForm" novalidate>
+            <div class="col-sm-6">
+                <label for="email" class="form-label">Почта</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" maxlength="300" email
+                    name="email" ngModel>
+                <div class="invalid-feedback">
+                    Укажите <b>правильно</b> вашу почту.
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="password1" class="form-label">Пароль</label>
+                <input type="password" class="form-control" id="password1" placeholder="parol12345" minlength="10"
+                    required="" maxlength="300" name="password1" ngModel>
+                <div class="invalid-feedback">
+                    Укажите пароль
+                </div>
+            </div>
+            <div>{{ isCorrect ? 'Отправлено' : 'Неправльный пароль или почта'}}</div>
+            <button class="w-100 btn btn-primary btn-lg" type="submit" [disabled]="myFormtwo.invalid"
+                (click)="login(myFormtwo)">Зарегистриваться</button>
+        </form>
+    </div>
+</section>

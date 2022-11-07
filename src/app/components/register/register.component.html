@@ -1,0 +1,76 @@
+<section>
+    <h2>Зарегистриваться</h2>
+
+    <div class="col-md-7 col-lg-8">
+
+        <form class="form-control" name="myForm" #myForm="ngForm" novalidate>
+            <div class="row g-3">
+
+                <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Имя</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Гор" value="" required="true" maxlength="20" name="firstName" mgModel>
+                    <div class="invalid-feedback">
+                        Это поле обязательное.
+                    </div>
+                    
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Фамилия</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Петросян" value="" required="true" maxlength="20" name="lastName" ngModel>
+                    <div class="invalid-feedback">
+                        Это поле обязательное.
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="thirdName" class="form-label">Отчество</label>
+                    <input type="text" class="form-control" id="thirdName" placeholder="Каренович" value="" required="false" maxlength="20" name="thirdName" ngModel>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="email" class="form-label">Почта</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" maxlength="300" email name="email" ngModel>
+                    <div class="invalid-feedback">
+                        Укажите <b>правильно</b> вашу почту.
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="password1" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="password1" placeholder="parol12345" minlength="10" required="" maxlength="300" name="password1" ngModel>
+                    <div class="invalid-feedback">
+                        Укажите пароль
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="password2" class="form-label">Подтверждение пароля</label>
+                    <input type="password" class="form-control" id="password2" placeholder="parol12345" minlength="10" required="" maxlength="300" name="password2" ngModel>
+                    <div class="invalid-feedback">
+                        Подтвердите пароль
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="date" class="form-label">Дата рождения</label>
+                    <input type="date" class="form-control" id="date" min='1900-01-01' max='2015-01-01' value="1950-01-01" name="birthday" ngModel>
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="date" class="form-label">Подтверждение пароля</label>
+                    <div class="form-check">
+                        <input id="male" name="gender" type="radio" class="form-check-input" checked="" ngModel>
+                        <label class="form-check-label" for="male">Муж.</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="female" name="gender" type="radio" class="form-check-input" ngModel>
+                        <label class="form-check-label" for="female">Жен.</label>
+                    </div>
+                </div>
+                
+                <button class="w-100 btn btn-primary btn-lg" type="submit" [disabled]="myForm.invalid" (click)="getValues(myForm)">Зарегистриваться</button>
+            </div>
+        </form>
+    </div>
+</section>

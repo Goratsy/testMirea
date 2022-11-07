@@ -1,0 +1,14 @@
+<section class="posts">
+  <h2>Все интересные новости за последние время</h2>
+  <div class="container">
+    <article *ngFor="let onePost of allPosts">
+      <div class="card" style="width: 18rem;">
+        <img [src]="onePost.img" class="card-img-top" [alt]="onePost.title">
+        <div class="card-body">
+          <h3>{{ onePost.title }}</h3>
+          <p class="card-text">{{ onePost.description }}</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
