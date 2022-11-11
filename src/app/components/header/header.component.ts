@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AuthService} from "../../auth.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-header',
@@ -7,11 +9,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   @Input() isAuth!: boolean
+  authStatusFromServiceSubscribe!: Observable<boolean>
 
   ngOnInit(): void {
-  }
+    this.authStatusFromServiceSubscribe = this.authService.getAuthStatus()
 
+  }
 }

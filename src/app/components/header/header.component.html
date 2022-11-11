@@ -13,5 +13,7 @@
         <button type="button" class="btn btn-primary" routerLink="/register">Зарегистрироваться</button>
       </div>
     </header>
-  {{isAuth ? 'test': 'tests false'}}
+  {{isAuth ? 'test': 'test false'}}
+  {{authService.isAuth ? 'test service': 'test service false' }}
+  {{authStatusFromServiceSubscribe ? 'test service Subscribe': 'test service Subscribe false' }}
   </div>

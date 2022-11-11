@@ -52,7 +52,7 @@ console.log(isSignin)
 })
 export class AppComponent {
   title = 'test-mirea';
-  isAuth = false
+  isAuth = true
 
   allPosts: IallPosts[] = allPosts;
 }
