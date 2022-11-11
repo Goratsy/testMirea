@@ -20,7 +20,7 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: '**', component: NotFoundComponent}
 ]
-  
+
 
 
 

@@ -34,7 +34,7 @@ export const allPosts: IallPosts[] = [
     title: 'Пирог',
     description: 'Пирог от мамы это хорошо, а пирог от бабушки это божественно.',
     img: 'https://img.delo-vcusa.ru/2019/09/pesochniy-pirog-s-yablokami.jpg'
-  }, 
+  },
   {
     id: 3,
     title: 'Пирог',
@@ -52,6 +52,7 @@ console.log(isSignin)
 })
 export class AppComponent {
   title = 'test-mirea';
+  isAuth = false
 
   allPosts: IallPosts[] = allPosts;
 }
